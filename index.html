@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Maconhão - As Aventuras Cósmicas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .chapter {
+            background-color: #1f1f1f;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .chapter:hover {
+            background-color: #333;
+        }
+        .animation {
+            display: none;
+            margin-top: 20px;
+        }
+        .animation img {
+            width: 100%;
+            max-width: 400px;
+            animation: float 3s infinite ease-in-out;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Super Maconhão - As Aventuras Cósmicas</h1>
+        <p>Clique em um capítulo para ver a animação!</p>
+        
+        <div class="chapter" onclick="showAnimation('cap1')">Capítulo 1: A Primeira Brisa</div>
+        <div class="chapter" onclick="showAnimation('cap2')">Capítulo 2: O Encontro com Shiva</div>
+        <div class="chapter" onclick="showAnimation('cap3')">Capítulo 3: Super Maconhão e Sócrates</div>
+        <div class="chapter" onclick="showAnimation('cap4')">Capítulo 4: Navegando com Colombo</div>
+        <div class="chapter" onclick="showAnimation('cap5')">Capítulo 5: No Estúdio com Bob Marley</div>
+        
+        <div id="cap1" class="animation">
+            <h2>A Primeira Brisa</h2>
+            <img src="supermaconhao.png" alt="Super Maconhão Flutuando">
+            <p>Super Maconhão descobre o poder da marola cósmica e decide espalhar a brisa pelo universo.</p>
+        </div>
+
+        <div id="cap2" class="animation">
+            <h2>O Encontro com Shiva</h2>
+            <img src="shiva_supermaconhao.png" alt="Super Maconhão e Shiva">
+            <p>Em uma montanha sagrada, Super Maconhão apresenta sua erva sagrada ao Deus Shiva, que adota a marola como símbolo de transcendência.</p>
+        </div>
+
+        <div id="cap3" class="animation">
+            <h2>Super Maconhão e Sócrates</h2>
+            <img src="socrates_supermaconhao.png" alt="Super Maconhão e Sócrates">
+            <p>Na Grécia Antiga, Super Maconhão ajuda Sócrates a entender a verdade absoluta: a mente aberta é o caminho para o conhecimento.</p>
+        </div>
+
+        <div id="cap4" class="animation">
+            <h2>Navegando com Colombo</h2>
+            <img src="colombo_supermaconhao.png" alt="Super Maconhão e Colombo">
+            <p>Super Maconhão ensina Colombo a navegar sob a influência da marola, e sem querer, acabam descobrindo um novo mundo.</p>
+        </div>
+
+        <div id="cap5" class="animation">
+            <h2>No Estúdio com Bob Marley</h2>
+            <img src="bobmarley_supermaconhao.png" alt="Super Maconhão e Bob Marley">
+            <p>Nos anos 70, Super Maconhão encontra Bob Marley e juntos criam a trilha sonora da liberdade.</p>
+        </div>
+    </div>
+    
+    <script>
+        function showAnimation(id) {
+            document.querySelectorAll('.animation').forEach(anim => anim.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
